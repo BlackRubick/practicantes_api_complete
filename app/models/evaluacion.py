@@ -8,3 +8,5 @@ class Evaluacion(Base):
     fk_proyecto = Column(Integer, ForeignKey('proyecto.id_proyecto'))
     fecha_evaluacion = Column(Date)
     fk_universidad = Column(Integer, ForeignKey('universidad.id_universidad'))
+    fk_administracion = Column(Integer, ForeignKey('administracion.id_administracion'))
+    es_evaluacion_activa = Column(Boolean, default=True)

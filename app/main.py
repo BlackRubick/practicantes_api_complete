@@ -8,7 +8,7 @@ from app.routers import (
     actividad, documentacion, notificacion,
     notificacion_practicante, notificacion_administracion,
     evaluacion, criterio_actitudinal, universidad_criterio,
-    evaluacion_actitudinal
+    evaluacion_actitudinal, admin_vista
 )
 
 
@@ -29,6 +29,6 @@ for r in [
     notificacion_practicante.router,
     notificacion_administracion.router, evaluacion.router,
     criterio_actitudinal.router, universidad_criterio.router,
-    evaluacion_actitudinal.router
+    evaluacion_actitudinal.router, admin_vista.router  # Agregamos el nuevo router
 ]:
     app.include_router(r)
